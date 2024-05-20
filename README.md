@@ -1,40 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 基本的な開発手順
 
-## Getting Started
+1. pages で SSR を行い、必要なデータを取得
+2. 取得したデータを props として hooks (context) に渡し、状態を管理
+3. hooks 内で状態管理やデータの加工を行い、component に受け渡す
+4. 渡されたデータを動的に使用する
+5. component は出来るだけ分け、再利用しやすいよう心掛ける
 
-First, run the development server:
+## 開発で気を付けること
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. 情報がうまく取れなかったり、表示がうまくいかない場合は、console.log で props や API 通信の response の中身を確認する
+2. 分からなかったら、まず検索する。検索して 30 分かけても解決できなければ、質問する。
+3. 一番多いのはタイプミスなので、まず第一にタイポを疑う
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 開発環境
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Node.js 18.17.0 以上
+npm 9.6.7
